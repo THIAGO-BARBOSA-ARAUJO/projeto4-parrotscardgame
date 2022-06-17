@@ -1,79 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
 
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    padding: 150px 120px;
-    background-color: #EEF9BF;
+  padding: 150px 120px;
+  background-color: #eef9bf;
+  display: flex;
+  position: relative;
 }
 
+.relogio-container {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
 
 .container-main h1 {
-    text-align: center;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 66px;
-    letter-spacing: -0.004em;
-    margin-bottom: 30px;
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: -0.004em;
+  margin-bottom: 30px;
 
-color: #75B79E;
+  color: #75b79e;
 }
 
 .area-cartas {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .carta {
-    width: 117px;
-    height: 146px;
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    margin: 10px;
-    transition: all .7s;
+  width: 117px;
+  height: 146px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.7s;
 }
 
 .face {
-    width: 117px;
-    height: 146px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: absolute;
-    border-radius: 5px;
+  width: 117px;
+  height: 146px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  border-radius: 5px;
 }
 
 .face img {
-    width: 100px;
+  width: 100px;
 }
 
 .frente {
-    background-color: #99CEA8;
-    transform: rotateY(180deg);
+  background-color: #99cea8;
+  transform: rotateY(180deg);
 }
 
 .atras {
-    background-color: rgb(0, 56, 88);
-    backface-visibility: hidden
+  background-color: #99cea8;
+  backface-visibility: hidden;
 }
 
 .atras img {
-    width: 80px;
+  width: 80px;
+  backface-visibility: hidden;
 }
 
 .flip {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
