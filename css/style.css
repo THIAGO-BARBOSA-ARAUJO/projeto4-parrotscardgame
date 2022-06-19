@@ -7,16 +7,28 @@
 }
 
 body {
-  padding: 150px 120px;
+  padding: 50px 20px;
   background-color: #eef9bf;
   display: flex;
   position: relative;
 }
 
+main {
+  width: 100%;
+}
+
 .relogio-container {
   position: absolute;
-  right: 30px;
+  right: 0px;
   top: 30px;
+  width: 100%;
+  max-width: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px 0 0 3px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Roboto";
 }
 
 .container-main h1 {
@@ -28,7 +40,6 @@ body {
   line-height: 66px;
   letter-spacing: -0.004em;
   margin-bottom: 30px;
-
   color: #75b79e;
 }
 

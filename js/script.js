@@ -65,6 +65,8 @@ let catas_corretas = [];
 
 const carta = document.querySelector(".carta");
 
+let meu_id;
+
 function flip(elemento) {
   const img_src = elemento.querySelector(".front-image").getAttribute("src");
   if (cards_clicados.length === 2) {
@@ -103,14 +105,21 @@ function flip(elemento) {
       });
 
       if (numero_cartas === catas_corretas.length) {
-        alert(`Você ganhou em ${jogadas} jogadas em ${segundos - 1} segundos!`);
-        let jogar_denovo = prompt("Você gostaria de jogar novamente ?");
-        while (jogar_denovo !== "sim" && jogar_denovo !== "não") {
-          jogar_denovo = prompt("Você gostaria de jogar novamente ?");
-        }
-        if (jogar_denovo === "sim") {
-          location.reload();
-        }
+        setTimeout(() => {
+          alert(
+            `Você ganhou em ${jogadas} jogadas em ${segundos - 1} segundos!`
+          );
+          let jogar_denovo = prompt("Você gostaria de jogar novamente ?");
+          while (jogar_denovo !== "sim" && jogar_denovo !== "não") {
+            jogar_denovo = prompt("Você gostaria de jogar novamente ?");
+          }
+          if (jogar_denovo === "sim") {
+            location.reload();
+          }else{
+            console.log(meu_id)
+            clearInterval(meu_id)
+          }
+        }, 1000);
       }
       cards_clicados = [];
     }
@@ -120,10 +129,11 @@ function flip(elemento) {
 let segundos = 0;
 
 function relogio() {
-  setInterval(() => {
+  meu_id = setInterval(() => {
     document.querySelector(".segundos").innerHTML = segundos;
     segundos++;
   }, 1000);
+  console.log(meu_id);
 }
 
 relogio();
